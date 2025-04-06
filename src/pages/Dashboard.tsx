@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import PageLayout from '@/components/layout/PageLayout';
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
 import { ChevronRight, CheckCircle2, Users, Droplet, Sprout, TreePine, BarChart2, Leaf } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -23,7 +22,7 @@ const Dashboard = () => {
   ];
 
   return (
-    <PageLayout title="Sustainable Farming Dashboard" subtitle="Multi-agent AI system for balancing sustainability and profitability">
+    <div>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         <Card className="nature-card col-span-full md:col-span-1">
           <CardHeader className="pb-2">
@@ -210,7 +209,7 @@ const Dashboard = () => {
           </CardContent>
         </Card>
       </div>
-    </PageLayout>
+    </div>
   );
 };
 
