@@ -109,4 +109,49 @@
   .leaf-icon {
     @apply text-nature-light-green animate-leaf-sway;
   }
+  
+  /* Add floating leaf animation */
+  .leaf-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  .leaf {
+    animation: float-leaf linear infinite;
+  }
+}
+
+@keyframes float-leaf {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes leaf-sway {
+  0%, 100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+@layer utilities {
+  .animate-leaf-sway {
+    animation: leaf-sway 6s ease-in-out infinite;
+  }
 }
